@@ -6,7 +6,7 @@ var request = require('superagent');
 var config = require('./config');
 
 // Require mongoose schema
-var db = mongoose.connect('mongodb://localhost/gifcoolery');
+var db = mongoose.connect('mongodb://localhost/reddit-previewer');
 
 var PostSchema = require('./schemas/post');
 var Post = mongoose.model('Post', PostSchema);
