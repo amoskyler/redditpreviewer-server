@@ -19,14 +19,14 @@ module.exports = (function (){
 
   if(env === 'production') {
     return {
-      url: 'https://redditpreviewer.com',
+      site_url: 'https://redditpreviewer.com',
       reddit_url: 'https://reddit.com',
       port: port
     };
   } else {
     // Dev config - dfeaults to dev config
     return {
-      url: 'http://localhost:'+port,
+      site_url: 'http://localhost:'+port,
       reddit_url: 'https://reddit.com',
       port: port
     }

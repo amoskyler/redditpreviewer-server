@@ -1,0 +1,9 @@
+//- img_gif.jade
+<!-- --filename = "../templates/head.jade" -->
+
+
+block div
+  h1 #{title}
+  video(poster=poster_url, preload="auto", autoplay="autoplay", mute="muted", loop="loop")
+    source(src=mp4_url type="video/mp4")
+    source(src=webm_url type="video/webm")

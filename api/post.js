@@ -10,7 +10,7 @@ module.exports = function (app) {
       if (err != null) {
         return res.send(new Error(err));
       } else if (post) {
-        return res.send({value: config.url + '/' + fullname});
+        return res.send({value: config.site_url + '/' + fullname});
       } else {
         createPost(fullname, function (err, link) {
           if (err != null) return res.send(err);
