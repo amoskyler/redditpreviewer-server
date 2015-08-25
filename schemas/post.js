@@ -11,7 +11,9 @@ module.exports = new Schema({
   author: String,
   permalink: String,
   selftext: String,
-  subtreddit: String,
+  selftext_html: String,
+  subreddit: String,
   url: String,
-  title: String
+  title: String,
+  embed: String
 });

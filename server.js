@@ -6,7 +6,7 @@ var request = require('superagent');
 var config = require('./config');
 
 // Require mongoose schema
-var db = mongoose.connect('mongodb://localhost/reddit-previewer');
+var db = mongoose.connect('mongodb://localhost/gifcoolery');
 
 var PostSchema = require('./schemas/post');
 var Post = mongoose.model('Post', PostSchema);
@@ -51,7 +51,21 @@ app.get('/:id', function (req, res) {
 });
 
 app.get('/', function(req, res){
-  return res.send('/')
+  var adHocHTML = '<div>'
+  adHocHTML += '<h2>Recently Created!</h2>'
+  Post.find({})
+      .select('id title')
+      .limit(15)
+      .exec(function (err, docs) {
+        if(err != null) return res.status(500).send(err);
+        var reducedPosts = docs.reduce(function (prev, curr, idx) {
+          return prev + '<div><a href="'+curr.id+'">' + curr.title + '</a></div>'
+        }, '');
+        adHocHTML += reducedPosts;
+        adHocHTML += '</div>'
+        return res.send(adHocHTML);
+      });
 });
 
-app.listen(9090);
+app.listen(9090)
+console.log('listening at port: 9090')
