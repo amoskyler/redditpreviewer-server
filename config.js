@@ -32,7 +32,7 @@ module.exports = (function (){
     });
 
   } else {
-    // Dev config - dfeaults to dev config
+    // Dev config - defaults to dev config
     return assign(opts, {
       site_url: 'http://localhost:'+port,
       reddit_url: 'https://reddit.com',
