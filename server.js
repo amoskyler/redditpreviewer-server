@@ -67,5 +67,5 @@ app.get('/', function(req, res){
       });
 });
 
-app.listen(9090)
-console.log('listening at port: 9090')
+app.listen(9090, '127.0.0.1');
+console.log("Server running at http://127.0.0.1:9090")
