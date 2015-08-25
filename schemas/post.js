@@ -14,16 +14,20 @@ var schema = new Schema({
     type: String,
     default: 'unsupported'
   },
+
+  media: [Schema.Types.Mixed],        // Should contain: {
+                                      //   url: String,
+                                      //   img_id: String,
+                                      //   domain: String,
+                                      //   mimetype: String,
+                                      //   animated: String,
+                                      //   mp4: String,
+                                      //   webm: String,
+                                      //   gifv: String,
+                                      //   post_url: String
+                                      // }
   uri: String,
   url: String,
-  mp4: String,
-  webm: String,
-  gifv: String,
-  animated: String,
-  poster_url: String,
-  img_id: String,
-  mimetype: String,
-  domain: String,
   author: String,
   permalink: String,
   selftext: String,
