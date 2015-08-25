@@ -1,6 +1,5 @@
 module.exports = (function (){
   var port, env;
-  env = process.env.NODE_ENV || 'dev';
 
   // skipping first two indexes
   // reference: http://stackoverflow.com/questions/4351521/how-to-pass-command-line-arguments-to-node-js
@@ -14,6 +13,9 @@ module.exports = (function (){
       port = arg[1] || 9090;
     }
   });
+
+  env = process.env.NODE_ENV || 'dev';
+  port = port || 9090;
 
   if(env === 'production') {
     return {
