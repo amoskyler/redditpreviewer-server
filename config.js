@@ -1,6 +1,8 @@
+var assign = require('obeject-assign');
+
 module.exports = (function (){
   var credentials = require('./credentials_config');
-  var port, env;
+  var port, env, opts;
 
   // skipping first two indexes
   // reference: http://stackoverflow.com/questions/4351521/how-to-pass-command-line-arguments-to-node-js
@@ -17,21 +19,24 @@ module.exports = (function (){
 
   env = process.env.NODE_ENV || 'dev';
   port = port || 9090;
+  opts = {
+    imgur_key: credentials.imgur.key,
+    imgur_secret: credentials.imgur.key
+  };
 
   if(env === 'production') {
-    return {
+    return assign(opts, {
       site_url: 'https://redditpreviewer.com',
       reddit_url: 'https://reddit.com',
-      imgur_key: credentials.imgur.key,
-      imgur_secret: credentials.imgur.key,
       port: port
-    };
+    });
+
   } else {
     // Dev config - dfeaults to dev config
-    return {
+    return assign(opts, {
       site_url: 'http://localhost:'+port,
       reddit_url: 'https://reddit.com',
       port: port
-    }
+    });
   }
 })();
