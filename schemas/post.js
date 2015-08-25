@@ -1,7 +1,7 @@
-mongoose = require('mongoose');
-Schema = mongoose.Schema;
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-module.exports = new Schema({
+var schema = new Schema({
   id: {
     type: String,
     unique: true
@@ -17,3 +17,5 @@ module.exports = new Schema({
   title: String,
   embed: String
 });
+
+module.exports = mongoose.model('Post', schema)
