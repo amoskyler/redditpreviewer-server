@@ -1,4 +1,5 @@
 module.exports = (function (){
+  var credentials = require('./credentials_config');
   var port, env;
 
   // skipping first two indexes
@@ -21,6 +22,8 @@ module.exports = (function (){
     return {
       site_url: 'https://redditpreviewer.com',
       reddit_url: 'https://reddit.com',
+      imgur_key: credentials.imgur.key,
+      imgur_secret: credentials.imgur.key,
       port: port
     };
   } else {
