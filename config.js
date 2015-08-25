@@ -1,7 +1,4 @@
-var assign = require('object-assign');
-
 module.exports = (function (){
-  var credentials = require('./credentials_config');
   var port, env, opts;
 
   // skipping first two indexes
@@ -19,24 +16,20 @@ module.exports = (function (){
 
   env = process.env.NODE_ENV || 'dev';
   port = port || 9090;
-  opts = {
-    imgur_key: credentials.imgur.key,
-    imgur_secret: credentials.imgur.key
-  };
+
 
   if(env === 'production') {
-    return assign(opts, {
+    return {
       site_url: 'https://redditpreviewer.com',
       reddit_url: 'https://reddit.com',
       port: port
-    });
-
+    };
   } else {
     // Dev config - defaults to dev config
-    return assign(opts, {
+    return opts, {
       site_url: 'http://localhost:'+port,
       reddit_url: 'https://reddit.com',
       port: port
-    });
+    };
   }
 })();
