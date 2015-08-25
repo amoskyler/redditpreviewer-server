@@ -1,4 +1,4 @@
-var assign = require('obeject-assign');
+var assign = require('object-assign');
 
 module.exports = (function (){
   var credentials = require('./credentials_config');

@@ -4,8 +4,8 @@ var Post = require('../schemas/post');
 
 module.exports = function (app) {
   app.post('/', function(req, res) {
-    var fullname = req.body.fullname
 
+    var fullname = req.body.fullname
     Post.findOne({'id': fullname}, function (err, post){
       if (err != null) {
         return res.send(new Error(err));

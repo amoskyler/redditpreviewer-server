@@ -6,16 +6,32 @@ var schema = new Schema({
     type: String,
     unique: true
   },
+  processed: {
+    type: Boolean,
+    default: false
+  },
+  type: {
+    type: String,
+    default: 'unsupported'
+  },
   uri: String,
+  url: String,
+  mp4: String,
+  webm: String,
+  gifv: String,
+  animated: String,
+  poster_url: String,
+  img_id: String,
+  mimetype: String,
   domain: String,
   author: String,
   permalink: String,
   selftext: String,
   selftext_html: String,
   subreddit: String,
-  url: String,
   title: String,
-  embed: String
+  embed: String,
+
 });
 
-module.exports = mongoose.model('Post', schema)
+module.exports = mongoose.model('Post', schema);
