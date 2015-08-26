@@ -26,6 +26,7 @@ var schema = new Schema({
                                       //   gifv: String,
                                       //   post_url: String
                                       // }
+  cover_photo: String,
   uri: String,
   url: String,
   author: String,
