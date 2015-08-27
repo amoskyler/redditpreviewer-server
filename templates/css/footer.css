@@ -1,0 +1,17 @@
+.footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 1em;
+}
+
+.footer .small {
+  text-align: center;
+}
+
+.footer .copywrite {
+  display: inline-block;
+}
+
+.footer .source {
+  display: inline-block;
+}

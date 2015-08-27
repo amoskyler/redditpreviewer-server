@@ -1,5 +1,5 @@
 
-case rendertype
+case mediatype
   when 'image-gif'
     include media_viewer_img_gif.jade
   when 'album'
@@ -7,5 +7,3 @@ case rendertype
   when 'gallery'
     // TODO: support gallery - just rendering in album currently
     include media_viewer_album.jade
-  //- when 'unsupported'
-  //-   include unsupported.jade

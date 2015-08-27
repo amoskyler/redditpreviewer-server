@@ -1,5 +1,17 @@
-extends default_header
-block content
+//- It will show a timestamp generated for the post (within the tracking period)
+//- timestamp + location on the page (location is determined by votes)
+//- tells us a lot about metadootworthiness of the post
+
+//- Use baconJS to display data/graphics moving over time w/inputs
+
+doctype html
+html
+  include head
+  script(rel='/text/javascript'): include js/clickBackController.js
   body(onclick='window.clickBack()' onmousemove='window.displayNavigation()')
-  block div
-    p Post type <b>#{type}</b> is not currently supported
+  div.main
+    include header
+    div.processing
+      p Post type <b>#{type}</b> is not currently supported (for obviously)
+      button#refresh(onclick='window.history.back()') Back :(
+  include footer

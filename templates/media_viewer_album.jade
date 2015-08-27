@@ -1,5 +1,6 @@
 //- Album template
 script(rel='/text/javascript'): include js/albumController.js
+script(rel='/text/javascript'): include js/MediaViewer.js
 div#media.media
   each image in media
     video(class="media-viewer" poster=image.poster_url preload="auto", autoplay="autoplay", mute="muted", loop="loop")

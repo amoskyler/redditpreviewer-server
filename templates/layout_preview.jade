@@ -1,7 +1,8 @@
 doctype html
 html
   include head
-  body(onclick='window.clickBack()' onmousemove='window.displayNavigation()')
+  script(rel='/text/javascript'): include js/clickBackController.js
+  body(onclick='clickBack()' onmousemove='displayNavigation()')
     div.main
       include header
       div.media-container

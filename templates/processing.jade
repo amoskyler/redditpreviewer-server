@@ -1,9 +1,11 @@
 doctype html
 html
   include head
+  script(rel='/text/javascript'): include js/clickBackController.js
   body(onclick='window.clickBack()' onmousemove='window.displayNavigation()')
   div.main
     include header
     div.processing
       p This thread preview is still being generated
       button#refresh(onclick='window.location.reload()') Refresh
+  include footer
