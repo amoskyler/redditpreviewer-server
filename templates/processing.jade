@@ -1,6 +1,8 @@
-extends default_header
-
-block content
-  div
-    p Thread preview is still being generated
-  
+doctype html
+html
+  include head
+  div.main
+    include header
+    div.processing
+      p This thread preview is still being generated
+      button#refresh(onclick='window.location.reload()') Refresh

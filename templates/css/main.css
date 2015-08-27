@@ -23,6 +23,12 @@ a {
   text-align: center;
 }
 
+.main .processing {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 50%;
+}
+
 .main .media-container {
   width: 50vw;
   height: 60vh;
