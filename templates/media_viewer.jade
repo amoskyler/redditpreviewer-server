@@ -1,0 +1,11 @@
+
+case rendertype
+  when 'image-gif'
+    include media_viewer_img_gif.jade
+  when 'album'
+    include media_viewer_album.jade
+  when 'gallery'
+    // TODO: support gallery - just rendering in album currently
+    include media_viewer_album.jade
+  //- when 'unsupported'
+  //-   include unsupported.jade

@@ -1,8 +1,0 @@
-//- img_gif.jade
-
-block div
-  h1
-    a(href=reddit_url + permalink) #{title}
-  video(poster=media[0].poster_url preload="auto", autoplay="autoplay", mute="muted", loop="loop")
-    source(src=media[0].mp4 type="video/mp4")
-    source(src=media[0].webm type="video/webm")

@@ -1,0 +1,51 @@
+body {
+  font-family: 'Inconsolata';
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  margin-top: 2em;
+  width: 50%;
+  transform: translateX(50%);
+}
+
+.main .site-header {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 2em;
+}
+
+.main .site-header .site-title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.main .media-container {
+  width: 50vw;
+  height: 60vh;
+}
+
+.main .media-container .media .media-viewer {
+  width: 50vw;
+  height: 60vh;
+  display: none;
+}
+
+.main .media-container .media .media-viewer.displayed{
+  width: 50vw;
+  height: 60vh;
+  display:inherit;
+}
+
+.main .post-title {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.main .post-reddit {
+  margin-top: 1em;
+  text-align: center;
+}

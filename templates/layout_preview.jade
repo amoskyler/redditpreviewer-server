@@ -1,0 +1,12 @@
+doctype html
+html
+  include head
+  body
+    div.main
+      include header
+      div.media-container
+        include media_viewer
+      div.post-title
+        a(href=reddit_url + permalink) #{title}
+      div.post-reddit
+        a(href=reddit_url+'/r/'+subreddit) /r/#{subreddit}
