@@ -1,0 +1,42 @@
+.votes {
+  text-align: center;
+  margin-top: .5em;
+}
+
+.votes .doot {
+  /* I really shouldn't have to do this */
+  /* Comic sans font normalizes the sizes for up/down unicode triangles*/
+  font-family: Comic Sans MS;
+  vertical-align: top;
+  display: inline-block;
+  margin-right: .1em;
+  margin-left: .1em;
+  font-size: 1.5em;
+  color: #2ECC71;
+}
+
+.votes .doot .arrow {
+  transition: all .5s ease;
+  opacity: 1;
+}
+
+.votes #dot-container {
+  position: relative;
+  height: 1.5em;
+  width: 1.5em;
+}
+.votes .doot #middle-dot, #loader {
+  transition: all .5s ease;
+  position: absolute;
+  height: inherit;
+  width: inherit;
+  left: 0em;
+}
+
+.votes .doot #loader {
+  opacity: 0;
+}
+
+.votes .doot #middle-dot {
+  transform: translate(2%, 4%);
+}

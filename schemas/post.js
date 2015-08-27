@@ -10,9 +10,18 @@ var schema = new Schema({
     type: Boolean,
     default: false
   },
+  lastUpdated: {
+    type: Date,
+    default: Date.now()
+  },
   type: {
     type: String,
     default: 'unsupported'
+  },
+  rating: {
+    up: Number,
+    down: Number,
+    weight: Number
   },
 
   media: [Schema.Types.Mixed],        // Should contain: {

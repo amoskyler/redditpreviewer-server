@@ -3,6 +3,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var express = require('express');
 var mongoose = require('mongoose');
+var path = require('path');
 // local requires
 var config = require('./config');
 
@@ -17,6 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 api.registerRoutes(app);
 

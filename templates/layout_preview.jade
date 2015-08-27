@@ -1,7 +1,7 @@
 doctype html
 html
   include head
-  script(rel='/text/javascript'): include js/clickBackController.js
+  script(rel='text/javascript'): include js/clickBackController.js
   body(onclick='clickBack()' onmousemove='displayNavigation()')
     div.main
       include header
@@ -11,3 +11,4 @@ html
         a.river(href=reddit_url + permalink) #{title}
       div.post-reddit
         a.belize(href=reddit_url+'/r/'+subreddit) /r/#{subreddit}
+      include votes

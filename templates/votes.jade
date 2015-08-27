@@ -1,0 +1,16 @@
+//-    ----------            ----------
+//-   |    /\    |          |  \    /  |
+//-   |   /  \   |   |--|   |   \  /   |
+//-   |  /    \  |   |--|   |    \/    |
+//-    ----------            ----------
+
+script(rel='text/javascript'): include js/vote.js
+style(rel='css/stylesheet'): include css/votes.css
+div.votes
+  div.doot#updoot(onclick='window.updoot("'+id+'")')
+    div.arrow &#x25B2;
+  div.doot#dot-container
+    div#middle-dot &#8226;
+    embed#loader(type='image/svg+xml' src='icons/pulse.svg')
+  div.doot#downdoot(onclick='window.downdoot("'+id+'")')
+    div.arrow &#x25BC;
