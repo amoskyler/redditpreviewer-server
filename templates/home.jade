@@ -1,0 +1,14 @@
+doctype html
+html
+  include head
+  body
+    div.main
+      include header
+    div.recent
+      each post in recent
+        div.post
+          span.title
+            a.river(href=post.id) #{post.title}
+          | in
+          span.subreddit
+            a.belize(href=reddit_url+'/r/'+post.subreddit) /r/#{post.subreddit}

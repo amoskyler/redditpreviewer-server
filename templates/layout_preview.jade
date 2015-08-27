@@ -1,12 +1,12 @@
 doctype html
 html
   include head
-  body
+  body(onmousemove="window.displayNavigation()")
     div.main
       include header
       div.media-container
         include media_viewer
       div.post-title
-        a(href=reddit_url + permalink) #{title}
+        a.river(href=reddit_url + permalink) #{title}
       div.post-reddit
-        a(href=reddit_url+'/r/'+subreddit) /r/#{subreddit}
+        a.belize(href=reddit_url+'/r/'+subreddit) /r/#{subreddit}
